@@ -30,6 +30,14 @@ de la div parent*/
     margin-bottom: 10px;
     margin-left: 40px;
     background-color: #bef7ff;
+    text-align:left;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+}
+p{
+    margin-left: 10px;
+    margin-top: 10px;
 }
 .keyBoard{
     width: 418px;
@@ -46,6 +54,7 @@ de la div parent*/
     padding: 10px;
     background: #313743;
 }
+
 .div7 {
      grid-area: 1 / 1 / 2 / 2; 
      border: 6px solid #5e2d03;
