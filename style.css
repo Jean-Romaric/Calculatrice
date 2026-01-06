@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FEEBE7;
+}
+.calculator-corp{
+    width: 500px;
+    height: 700px;
+    margin-top: 45px;
+    margin-bottom: 50px ;
+     border: 2px solid black;
+    background-color: #fcb92d; 
+    box-shadow: 11px 7px 28px -6px rgba(0,0,0,0.75);
+}/*Je comprends par la que si je met une div enfant  dans une div parent et je augment la taille (largeur) 
+de la div parent la largeur des deux divs vont augmenter */
+/*lorsque j'augmente le margin topd'une div enfant dens une div parent la div enfant est capable de sortir
+de la div parent*/
+.screen{
+    width: 418px;
+    height: 100px;
+    border: 2px solid black;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    background-color: #bef7ff;
+}
+.keyBoard{
+    width: 418px;
+    height: 500px;
+    border: 2px solid black;
+    margin-top: 20px;
+    margin-left: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap:  21px;
+    grid-row-gap: 15px;
+    padding-right: 10px;
+    padding: 10px;
+    background: #313743;
+}
+.div7 {
+     grid-area: 1 / 1 / 2 / 2; 
+     border: 6px solid #5e2d03;
+     text-align: center;
+     font-size: 70px;
+     color: rgb(86, 62, 62);
+     background: #fadda1;
+
+    }/*grid-area: pourdire ccette zone dela grid
+va occuper la 1er ligne/ la pemière colonne/ et Prend fin a la 2ème ligne/ la 2ème colonne*/
+/*.div1 { grid-area: 1 / 1 / 3 / 3; } Cela veut dire lz zone div 1 commence a la premier ligne / la premier colonne / et /se termine a la troisieme  Ligene et colonne*/
+.div8 { grid-area: 1 / 2 / 2 / 3; border: 6px solid #5e2d03; text-align: center;font-size: 70px; background: #fadda1; color: rgb(86, 62, 62); }
+.div9 { grid-area: 1 / 3 / 2 / 4; border: 6px solid #5e2d03; text-align: center;font-size: 70px; background: #fadda1; color: rgb(86, 62, 62); } 
+.divRemDiv{ 
+    grid-area: 1 / 4 / 2 / 5; 
+    border: 6px solid #5e2d03; 
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 15px;
+    font-size: 30px;
+    background: #fadda1;    
+    color: rgb(86, 62, 62); 
+    display: grid;
+    text-align: center;/*dans une div parent lorsque j'applique le text align-center cela centrer les texts egalement de 
+    de le ou des divs enfants   */
+
+}
+.remove   {
+ text-align: center;
+ border: 2px solid #5e2d03;
+}
+.division{
+    font-size: 30px;
+}
+.div4 { grid-area: 2 / 1 / 3 / 2; border: 6px solid #5e2d03; text-align: center;font-size: 70px; background: #fadda1; color: rgb(86, 62, 62); }
+.div5 { grid-area: 2 / 2 / 3 / 3; border: 6px solid #5e2d03; text-align: center;font-size: 70px; background: #fadda1; color: rgb(86, 62, 62); }
+.div6 { grid-area: 2 / 3 / 3 / 4; border: 6px solid #5e2d03; text-align: center;font-size: 70px; background: #fadda1; color: rgb(86, 62, 62); }
+.divx { grid-area: 2 / 4 / 3 / 5; border: 6px solid #5e2d03; text-align: center;font-size: 70px; background: #fadda1; color: rgb(86, 62, 62); }
+.div1 { grid-area: 3 / 1 / 4 / 2; border: 6px solid #5e2d03; text-align: center;font-size: 70px; background: #fadda1; color: rgb(86, 62, 62); }
+.div2 { grid-area: 3 / 2 / 4 / 3; border: 6px solid #5e2d03; text-align: center;  font-size: 70px; background: #fadda1;color: rgb(86, 62, 62);}
+.div3 { grid-area: 3 / 3 / 4 / 4; border: 6px solid #5e2d03; text-align: center;  font-size: 70px; background: #fadda1;color: rgb(86, 62, 62);}
+.div- { grid-area: 3 / 4 / 4 / 5; border: 6px solid #5e2d03; text-align: center;  font-size: 70px; background: #fadda1;color: rgb(86, 62, 62);}
+.div0 { grid-area: 4 / 1 / 5 / 2; border: 6px solid #5e2d03; text-align: center;  font-size: 70px; background: #fadda1;color: rgb(86, 62, 62);}
+.divPoint { grid-area: 4 / 2 / 5 / 3; border: 6px solid #5e2d03; text-align: center;  font-size: 70px; background: #fadda1;color: rgb(86, 62, 62);}
+.divEgal { grid-area: 4 / 3 / 5 / 4; border: 6px solid #5e2d03; text-align: center;  font-size: 70px; background: #fadda1;color: rgb(86, 62, 62);}
+.divPlus { grid-area: 4 / 4 / 5 / 5; border: 6px solid #5e2d03; text-align: center;  font-size: 70px; background: #fadda1;color: rgb(86, 62, 62);}
+
+.div7, .div8, .div9,.divRemDiv, .div4,
+ .div5, .div6, .divx, .div1, .div2,
+ .div3, .div-, .div0, .divPoint, .divEgal,
+ .divPlus
+:hover {
+  cursor: pointer;
+  /*transform: translateY(-5px);*/
+   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*Type de média : screen (écrans), print (impression), etc..*/
+
+@media screen and (max-width: 518px) { /*pour les ecrans de taille inferieure ou egale a 768px*/
+  body {
+
+    background-color: rgb(236, 10, 10);
+  }
+ .calculator-corp {
+    width: 100%; /*Ceci veut dire que  .calculator-corp occupe 100 % 
+    de la largeur de son  parent body*/
+    height: auto;/*La hauteur de l'element s'adapte automatiquement celon sont contenu
+    Donc si le contenu augment d'hauteur, le parent vas s'adapter*/
+    margin: 20px;
+  }
+  .screen {
+    width: 90%;
+    height: 70px;
+    margin: 20px  auto; /*cela veut dire 20px en haut et en bas auto à gauche et à droite*/
+  }
+  .keyBoard {
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+}
