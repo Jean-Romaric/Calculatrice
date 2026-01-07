@@ -6,12 +6,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
   let button = document.querySelectorAll(".button");
 //console.log(button);
+     //let nbre = null;
+     let chain_cara = [];
+
 button.forEach((element, index, array) => {
-   console.log(element.innerText);
-     let nbre = null;
+   //console.log(element.innerText);
      element.addEventListener("click",()=>{
       nbre = element.innerText;
-      screen.textContent = screen.textContent + nbre;
+      chain_cara.push(nbre);
+      console.log(chain_cara.join(''));
+      screen.textContent = chain_cara.join('').slice(-16);
      })
 });    
 

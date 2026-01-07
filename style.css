@@ -99,7 +99,7 @@ va occuper la 1er ligne/ la pemière colonne/ et Prend fin a la 2ème ligne/ la 
 .div0 { grid-area: 4 / 1 / 5 / 2; border: 6px solid #5e2d03; text-align: center;  font-size: 70px; background: #fadda1;color: rgb(86, 62, 62);}
 .divPoint { grid-area: 4 / 2 / 5 / 3; border: 6px solid #5e2d03; text-align: center;  font-size: 70px; background: #fadda1;color: rgb(86, 62, 62);}
 .divEgal { grid-area: 4 / 3 / 5 / 4; border: 6px solid #5e2d03; text-align: center;  font-size: 70px; background: #fadda1;color: rgb(86, 62, 62);}
-.divPlus { grid-area: 4 / 4 / 5 / 5; border: 6px solid #5e2d03; text-align: center;  font-size: 70px; background: #fadda1;color: rgb(86, 62, 62);}
+.divPlus { grid-area: 4 / 4 / 5 / 5; border: 6px solid #5e2d03; text-align: center;  font-size: 70px; background: #fadda1;color: rgb(86, 62, 62);cursor: pointer;}
 
 .div7, .div8, .div9,.divRemDiv, .div4,
  .div5, .div6, .divx, .div1, .div2,
