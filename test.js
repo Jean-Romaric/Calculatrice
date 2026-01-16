@@ -25,12 +25,30 @@ let tab = []
 //console.log(tab.includes(tab[tab.length - 1]) == "2")
 //console.log(["+","-","x","/"].includes("x"))*/
 
-let memoire = ["2"]
-
-
+//let memoire = ["3", "+", "2", "-5"]
+/*let chaine = memoire.join(" ")
+console.log(chaine)
+console.log(parseInt(chaine))*/
 //console.log(memoire.includes(memoire[memoire.length - 1]));
-console.log(memoire[memoire.length - 1] )
+//console.log(memoire.at(-4) )
 
-while (memoire > 0){
-  console.log("true")
+//while (memoire > 0){
+  //console.log("true")
+//}
+
+//console.log(Math.sqrt(25));
+let chiffres = [ "2", ".", "2", "+", "2", "3", ".", "5", "+", "1", ".", "2", "."]
+
+
+for(i = chiffres.length-1; i >=0 ; i--){
+console.log(i)
+if(chiffres[i] == "+"){
+ console.log("zdv")
+ return
 }
+}
+
+
+//if){
+  
+//}

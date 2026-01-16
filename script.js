@@ -2,89 +2,80 @@ document.addEventListener('DOMContentLoaded', function() {
 //alert("bonjour")
     let screen = document.querySelector(".screen");
   screen.textContent="";
-
-
   let buttons = document.querySelectorAll(".button");
-  let opperateur =  document.getElementsByClassName("opperateur");
-
-
-  let division = opperateur[0].textContent;
-  let multiplication = opperateur[1].textContent;
-  let moins = opperateur[2].textContent;
-  let plus = opperateur[3].textContent;
-
+ 
 
   let memoire = [];
 
+  function estOperateur(valeur) {
+  return valeur === "+" || valeur === "-" || valeur === "x" || valeur === "/";
+}
+
+  function pasOperateur(opperateur){
+    return opperateur == "+" ||  opperateur !== "-"  || opperateur !== "x" || opperateur !== "/" //!==   // différent en valeur OU en type
+  }
+
+//console.log(estOperateur("+")) //la fonction return vraie ou faux 
 
   buttons.forEach((button, index, array) => {
       button.addEventListener("click",(event)=>{
-        nbre = button.innerText;
-        
-
-
-         //if(memoire[memoire.length - 1] == "-" || memoire[memoire.length - 1] =="x" || memoire[memoire.length - 1] =="+" || memoire[memoire.length - 1] == "/"){
-          // memoire.pop()
-        //};
-
-
-        //console.log(memoire[memoire.length - 1] == "-" || memoire[memoire.length - 1] =="x" || memoire[memoire.length - 1] =="+" || memoire[memoire.length - 1] == "/")
-        //console.log(division);
-
-
-
+       let nbre = button.innerText;
         if (memoire.length === 0 )  {
             if(button.classList.contains("opperateur")
                && !button.classList.contains("moins")
-               || button.classList.contains("vircule")
+               || button.classList.contains("virgule")
               ){
               return
             }else{
               memoire.push(nbre);
               console.log(memoire);
             }
-        }else{
-          
-          if(memoire.includes("+") && memoire[memoire.length-1] == "+" && event.target.classList.contains("opperateur")){
-            return
-          } else if(memoire.includes("-") && memoire[memoire.length-1] == "-" &&  event.target.classList.contains("opperateur")) {
-             return
-          } else if (memoire.includes("x") && memoire[memoire.length-1] == "x" &&  event.target.classList.contains("opperateur")) {
-            return
-          }else if(memoire.includes("/") && memoire[memoire.length-1] == "/" &&  event.target.classList.contains("opperateur")) {
-            return
-          }else {
-            memoire.push(nbre);
-           console.log(memoire);
-          }
+        }else {
+
+
+  let dernier = memoire[memoire.length - 1];
+  if (estOperateur(dernier) && button.classList.contains("opperateur")) {
+
+    return;
+  }
+   if (estOperateur(dernier) && button.classList.contains("virgule")) {
+    return;
+  }
+   if (dernier == "." && button.classList.contains("opperateur")) {
+    return;
+  }
+  if (dernier === "." && button.classList.contains("virgule")) {
+    return;
+  }
+
+
+ 
+
+const elementRecherche = '.';
+const occurrences = memoire.filter(contenu => contenu === elementRecherche);
+console.log(occurrences.length); 
+nonbre_virgule = occurrences.length
+console.log( nonbre_virgule >= 1) 
+
+if (
+  !estOperateur(dernier) &&
+  nonbre_virgule >= 1 &&
+  button.classList.contains("virgule")
+) {
+  return;
+}
 
 
 
+  //console.log(!estOperateur(dernier)) //donne "VRAIE": N'EST PAS UN OPPERATEUR
 
 
-          
-         
-           
+  memoire.push(nbre);
+  console.log(memoire);
+}
 
-           //console.log( memoire[memoire.length - 1] == memoire[memoire.length - 2])
-
-
-
-        }
-          //console.log("true");
-
-
-
-
-
-
-        if (button.classList.contains("opperateur")) {
-          //console.log("c'est un opérateur");
-        }
-
-
-      });
   });
+});
 
 
 
