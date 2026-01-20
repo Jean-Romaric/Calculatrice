@@ -37,18 +37,60 @@ console.log(parseInt(chaine))*/
 //}
 
 //console.log(Math.sqrt(25));
-let chiffres = [ "2", ".", "2", "+", "2", "3", ".", "5", "+", "1", ".", "2", "."]
+//let chiffres = [ "2", ".", "2", "+", "2", "3", ".", "5", "+", "1", "2", "."]
 
-
+/*function dernierOpperIndex(){
 for(i = chiffres.length-1; i >=0 ; i--){
-console.log(i)
-if(chiffres[i] == "+"){
- console.log("zdv")
- return
+//console.log(i)
+    if(chiffres[i] == "+"){
+    //console.log(i)
+    return i
+    }
+  }
 }
+//dernierOpperIndex()
+let virgule = 0; 
+let a = [];
+function auMoinsVirgule(){
+for(i = dernierOpperIndex(); i<= chiffres.length-1;  i++ ){
+  //console.log(chiffres[i])
+  if(chiffres[i] == "." ){
+    virgule += 1;
+    a.push(virgule);
+  }
+ }
+  if (a.length >= 1){
+    return true
+  }
+}
+
+auMoinsVirgule();*/
+
+let chiffres = ["2", ".", "2", "+", "2", "3", ".", "5", "+", "1", "2",];
+
+function dernierOperateurIndex() {
+  for (let i = chiffres.length - 1; i >= 0; i--) {
+    if (chiffres[i] === "+") {
+      return i;
+    }
+  }
+  return -1; // Aucun + trouvé
 }
 
 
-//if){
-  
-//}
+
+
+
+function contientVirguleApresDernierPlus() {
+  const index = dernierOperateurIndex();
+  if (index === -1) return false; // Pas de + dans le tableau
+
+  // Vérifier s’il y a une virgule après le dernier +
+  for (let i = index + 1; i < chiffres.length; i++) {
+    if (chiffres[i] === ".") {
+      return true; // On a trouvé une virgule
+    }
+  }
+  return false; // Pas de virgule trouvée
+}
+console.log(contientVirguleApresDernierPlus());
