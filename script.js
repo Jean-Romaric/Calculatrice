@@ -79,7 +79,7 @@ screen.textContent = memoire.join('').slice(-15); /* je dois dire si la taille d
 
 
 if(mobileQuery.matches){
-  screen.textContent = memoire.join('').slice(-5);
+  screen.textContent = memoire.join('').slice(-3);
 }
 
 
