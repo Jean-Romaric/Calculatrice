@@ -94,3 +94,5 @@ function contientVirguleApresDernierPlus() {
   return false; // Pas de virgule trouvée
 }
 console.log(contientVirguleApresDernierPlus());
+
+handleMobileChange(e)

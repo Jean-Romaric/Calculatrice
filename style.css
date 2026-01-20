@@ -117,10 +117,10 @@ va occuper la 1er ligne/ la pemière colonne/ et Prend fin a la 2ème ligne/ la 
 /*Type de média : screen (écrans), print (impression), etc..*/
 
 @media screen and (max-width: 518px) { /*pour les ecrans de taille inferieure ou egale a 768px*/
-  body {
+  /*body {
 
     background-color: rgb(236, 10, 10);
-  }
+  }*/
  .calculator-corp {
     width: 100%; /*Ceci veut dire que  .calculator-corp occupe 100 % 
     de la largeur de son  parent body*/

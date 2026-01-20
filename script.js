@@ -1,28 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
 //alert("bonjour")
-    let screen = document.querySelector(".screen");
-  
+  let screen = document.querySelector(".screen");
   let buttons = document.querySelectorAll(".button");
- 
+  const mobileQuery = window.matchMedia('(max-width: 518px)');
+  //console.log(window) a faire des recheches 
+  console.log(mobileQuery)
+  console.log(mobileQuery.matches)
 
   let memoire = [];
-  
   
 
   function estOperateur(valeur) {
   return valeur === "+" || valeur === "-" || valeur === "x" || valeur === "/";
 }
-
-  //function opperateur(valeur){
-
-  //}
-
-/*  function pasOperateur(opperateur){
-    return opperateur == "+" ||  opperateur !== "-"  || opperateur !== "x" || opperateur !== "/" //!==   // différent en valeur OU en type
-  }*/
-
-//console.log(estOperateur("+")) //la fonction return vraie ou faux 
-
   buttons.forEach((button, index, array) => {
       button.addEventListener("click",(event)=>{
        let nbre = button.innerText;
@@ -78,46 +68,19 @@ function contientVirguleApresDernierPlus() {
 if(contientVirguleApresDernierPlus() && button.classList.contains("virgule") || dernierOperateurIndex() == -1 && memoire.includes(".") && button.classList.contains("virgule")){
   return
 }
-screen.textContent = memoire.join('').slice(-17); /* je dois dire si la taille de l'ecrant est max-width: 518px tu mets slice(-15) sinon slice(-17)*/
 
-//console.log(dernierOperateurIndex() == -1 && memoire.includes(".") && button.classList.contains("virgule"))
-
-//console.log(!estOperateur(dernier) && memoire.includes(".")  );
-//console.log(estOperateur("+"))
-
-
-
-
- 
-
-//const elementRecherche = '.';
-//const occurrences = memoire.filter(contenu => contenu === elementRecherche);
-//console.log(occurrences.length); 
-//nonbre_virgule = occurrences.length
-//console.log( nonbre_virgule >= 1) 
-
-/*if (
-  !estOperateur(dernier) &&
-  nonbre_virgule >= 1 &&       // a implementer 
-  button.classList.contains("virgule")
-) {
-  return;
-}*/
-
-
-
-  //console.log(!estOperateur(dernier)) //donne "VRAIE": N'EST PAS UN OPPERATEUR
-
-
+screen.textContent = memoire.join('').slice(-15); /* je dois dire si la taille de l'ecrant est max-width: 518px tu mets slice(-15) sinon slice(-17)*/
   memoire.push(nbre);
   console.log(memoire);
-}
-
-  });
+  
+  }
+ });
 });
 
 
-
+if(mobileQuery.matches){
+  screen.textContent = memoire.join('').slice(-10);
+}
 
 
 
