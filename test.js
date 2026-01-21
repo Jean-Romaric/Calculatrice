@@ -66,7 +66,7 @@ for(i = dernierOpperIndex(); i<= chiffres.length-1;  i++ ){
 
 auMoinsVirgule();*/
 
-let chiffres = ["2", ".", "2", "+", "2", "3", ".", "5", "+", "1", "2",];
+/*let chiffres = ["2", ".", "2", "+", "2", "3", ".", "5", "+", "1", "2",];
 
 function dernierOperateurIndex() {
   for (let i = chiffres.length - 1; i >= 0; i--) {
@@ -95,4 +95,21 @@ function contientVirguleApresDernierPlus() {
 }
 console.log(contientVirguleApresDernierPlus());
 
-handleMobileChange(e)
+handleMobileChange(e)*/
+
+//console.log(2+2/4+3-4);
+
+/*let memoire = ["2", "x", "2", "+", "4", "x", "4" ]
+
+for(i = 0; i<=memoire.length-1; i++){
+
+  //console.log(memoire[i]);
+  if(memoire[i] == "x"){
+    memoire[i] = "*";
+  }
+    
+}
+console.log(memoire);*/
+
+let nbre = Number("2.5 + 2");
+console.log(nbre);

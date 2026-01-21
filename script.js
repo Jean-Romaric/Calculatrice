@@ -1,20 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
-//alert("bonjour")
   let screen = document.querySelector(".screen");
   let buttons = document.querySelectorAll(".button");
-  const mobileQuery = window.matchMedia('(max-width: 518px)');
+  let suprimer = document.querySelector(".remove");
+  let egal = document.querySelector(".divEgal");
+  //console.log(egal);
+  
+  //[const mobileQuery = window.matchMedia('(max-width: 518px)');
   //console.log(window) a faire des recheches 
-  console.log(mobileQuery)
-  console.log(mobileQuery.matches)
+  //console.log(mobileQuery) 
+  //console.log(mobileQuery.matches)] Pour adaapter sur mobile
 
   let memoire = [];
   
 
+
+  /*if(mobileQuery.matches){
+  screen.textContent = memoire.join('').slice(-0);
+}*/
   function estOperateur(valeur) {
   return valeur === "+" || valeur === "-" || valeur === "x" || valeur === "/";
 }
   buttons.forEach((button, index, array) => {
-      button.addEventListener("click",(event)=>{
+      button.addEventListener("click",(_event)=>{
        let nbre = button.innerText;
         if (memoire.length === 0 )  {
             if(button.classList.contains("opperateur")
@@ -24,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
               return
             }else{
               memoire.push(nbre);
+              screen.textContent = memoire.join('').slice(-15); //pp
               console.log(memoire);
             }
         }else {
@@ -65,22 +73,66 @@ function contientVirguleApresDernierPlus() {
   }
   return false; // Pas de virgule trouvée
 }
-if(contientVirguleApresDernierPlus() && button.classList.contains("virgule") || dernierOperateurIndex() == -1 && memoire.includes(".") && button.classList.contains("virgule")){
+if(contientVirguleApresDernierPlus() && 
+button.classList.contains("virgule") || 
+dernierOperateurIndex() == -1  
+&& memoire.includes(".") 
+&& button.classList.contains("virgule")){
   return
 }
 
-screen.textContent = memoire.join('').slice(-15); /* je dois dire si la taille de l'ecrant est max-width: 518px tu mets slice(-15) sinon slice(-17)*/
+ /* je dois dire si la taille de l'ecrant est max-width: 518px tu mets slice(-15) sinon slice(-17)*/
   memoire.push(nbre);
+  screen.textContent = memoire.join('').slice(-15);
   console.log(memoire);
   
   }
+  });
  });
+
+
+//Suppresion
+suprimer.addEventListener("click",(_event)=>{
+ if(memoire.length === 0){
+  return
+ }else{
+  memoire.pop();
+  screen.textContent = memoire.join('').slice(-15);
+  console.log(memoire);
+ }
+});
+
+//Calcule "="
+egal.addEventListener("click",(_event)=>{
+  let dernier = memoire[memoire.length - 1];
+  let erreur = "Erreur";// c'est du text prute que je met dans div, je p pas styliser directement.
+  //console.log(erreur);
+  if(memoire.length === 0 ){
+    screen.innerHTML = erreur;
+    return
+  } else if(estOperateur(dernier) || dernier === "." ){
+    screen.innerHTML = erreur;
+    memoire.splice(0, memoire.length);//Supp tout le tbleau
+    console.log(memoire); 
+    return
+  } else {
+   for(i = 0; i<=memoire.length-1; i++){
+    //console.log(memoire[i]);
+    if(memoire[i] == "x"){
+      memoire[i] = "*";
+    }
+  } 
+   let calcule = memoire.join(" ");
+   //console.log(calcule);
+   let resultat = eval(calcule);
+   console.log(resultat); //eval elavue une chaine comme du code.
+    // A revoir A revoir A revoir A revoir
+    screen.innerHTML = resultat.toString();
+
+  }
 });
 
 
-if(mobileQuery.matches){
-  screen.textContent = memoire.join('').slice(-0);
-}
 
 
 
@@ -90,16 +142,4 @@ if(mobileQuery.matches){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
- });
+});
