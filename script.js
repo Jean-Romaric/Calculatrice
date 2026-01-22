@@ -122,12 +122,14 @@ egal.addEventListener("click",(_event)=>{
       memoire[i] = "*";
     }
   } 
-   let calcule = memoire.join(" ");
-   //console.log(calcule);
-   let resultat = eval(calcule);
+   let opperation = memoire.join("");
+   //opperation.toString;
+   console.log(opperation)
+   //console.log(opperation.toString());
+   let resultat = eval(opperation);
    console.log(resultat); //eval elavue une chaine comme du code.
-    // A revoir A revoir A revoir A revoir
-    screen.innerHTML = resultat.toString();
+   screen.innerHTML = resultat.toString();
+   memoire.splice(0, memoire.length);
 
   }
 });

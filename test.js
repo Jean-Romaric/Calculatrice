@@ -111,5 +111,6 @@ for(i = 0; i<=memoire.length-1; i++){
 }
 console.log(memoire);*/
 
-let nbre = Number("2.5 + 2");
-console.log(nbre);
+//let nbre = Number("2.5 + 2");
+//console.log(nbre);
+console.log(eval("113222222222222+2*3-22222222222222222/233"))
