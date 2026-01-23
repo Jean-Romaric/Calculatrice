@@ -27,10 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
   buttons.forEach((button, index, array) => {
       button.addEventListener("click",(_event)=>{
        let nbre = button.innerText;
-        if ('vibrate' in navigator) {
-        // Fait vibrer pendant 200 millisecondes
-        navigator.vibrate(200); 
-        }
+        
         if (memoire.length === 0 )  {
             if(button.classList.contains("opperateur")
                && !button.classList.contains("moins")
@@ -38,6 +35,10 @@ document.addEventListener('DOMContentLoaded', function() {
               ){
               return
             }else{
+              if ('vibrate' in navigator) {
+              // Fait vibrer pendant 200 millisecondes
+              navigator.vibrate(200); 
+              }
               memoire.push(nbre);
               screen.textContent = memoire.join('').slice(-15); //pp
               console.log(memoire);
