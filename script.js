@@ -13,7 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
   //console.log(mobileQuery.matches)] Pour adaapter sur mobile
 
   let memoire = [];
-  ''
+  
+
+  
+
+
   /*if(mobileQuery.matches){
   screen.textContent = memoire.join('').slice(-0);
 }*/
@@ -23,6 +27,10 @@ document.addEventListener('DOMContentLoaded', function() {
   buttons.forEach((button, index, array) => {
       button.addEventListener("click",(_event)=>{
        let nbre = button.innerText;
+        if ('vibrate' in navigator) {
+        // Fait vibrer pendant 200 millisecondes
+        navigator.vibrate(200); 
+      }
         if (memoire.length === 0 )  {
             if(button.classList.contains("opperateur")
                && !button.classList.contains("moins")
@@ -104,14 +112,8 @@ suprimer.addEventListener("click",(_event)=>{
  }
 });
 suprimer.addEventListener("mousedown",(_event)=>{
-  console.log("maintenu");
-  if(memoire.length === 0){
-  return
- }else{
-  memoire.pop();
-  screen.textContent = memoire.join('').slice(-15);
-  console.log(memoire);
- }
+  console.log("maintenu")//Pour suppression pendant la maintennance du button "<="
+  
 })
 
 
