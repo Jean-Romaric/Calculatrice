@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
   let buttons = document.querySelectorAll(".button");
   let suprimer = document.querySelector(".remove");
   let egal = document.querySelector(".divEgal");
+
+  screen.innerHTML = "Yao-Konan-Flavio"
   //console.log(egal);
   
   //[const mobileQuery = window.matchMedia('(max-width: 518px)');
@@ -11,9 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
   //console.log(mobileQuery.matches)] Pour adaapter sur mobile
 
   let memoire = [];
-  
-
-
+  ''
   /*if(mobileQuery.matches){
   screen.textContent = memoire.join('').slice(-0);
 }*/
@@ -124,24 +124,24 @@ egal.addEventListener("click",(_event)=>{
   } 
    let opperation = memoire.join("");
    //opperation.toString;
-   console.log(opperation)
-   //console.log(opperation.toString());
+   //console.log(opperation)
    let resultat = eval(opperation);
-   console.log(resultat); //eval elavue une chaine comme du code.
-   screen.innerHTML = resultat.toString();
+   //console.log(resultat); //eval elavue une chaine comme du code.
+
+   screen.innerHTML = "<span style>" + resultat.toString().slice(-15) +"<span/>"
    memoire.splice(0, memoire.length);
 
   }
 });
 
+//Probleme d'affichage mobile
+//Probleme d'affichage ordinateeur debornement 
+//Ajuster un fontSize correcte
+//Afficher le resultat à gauche 
+//Ajuster le resultat
 
-
-
-
-
-
-
-
+// Genre de resultat 4.E11
+//Opperationde se genre 0.OO5+1 "bug"
 
 
 });

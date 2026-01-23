@@ -35,6 +35,8 @@ de la div parent*/
     font-size: 50px;
     display: flex;
     align-items: center;
+    user-select: none;
+    cursor: default;
 }
 p{
     margin-left: 10px;
