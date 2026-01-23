@@ -138,7 +138,7 @@ egal.addEventListener("click",(_event)=>{
 //Probleme d'affichage ordinateeur debornement 
 //Ajuster un fontSize correcte
 //Afficher le resultat à gauche 
-//Ajuster le resultat
+//Ajuster les resultats trop long
 
 // Genre de resultat 4.E11
 //Opperationde se genre 0.OO5+1 "bug"
