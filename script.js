@@ -110,10 +110,7 @@ egal.addEventListener("click",(_event)=>{
   if(memoire.length === 0 ){
     return;
   } else if(estOperateur(dernier) || dernier === "." ){
-    screen.innerHTML = erreur;
-    memoire.splice(0, memoire.length);//Supp tout le tbleau
-    console.log(memoire); 
-    return
+    return;
   } else {
    for(i = 0; i<=memoire.length-1; i++){
     //console.log(memoire[i]);
