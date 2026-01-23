@@ -113,4 +113,10 @@ console.log(memoire);*/
 
 //let nbre = Number("2.5 + 2");
 //console.log(nbre);
-console.log(eval("113222222222222+2*3-22222222222222222/233"))
+//console.log(eval("113222222222222+2*3-22222222222222222/233"))
+
+
+
+//[55]
+//_ si utilisateur apui egal
+//_ si tb pas vide

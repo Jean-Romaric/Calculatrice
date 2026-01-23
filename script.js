@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
   //console.log(mobileQuery.matches)] Pour adaapter sur mobile
 
   let memoire = [];
-  ''
   /*if(mobileQuery.matches){
   screen.textContent = memoire.join('').slice(-0);
 }*/
@@ -91,6 +90,7 @@ dernierOperateurIndex() == -1
  });
 
 
+ 
 //Suppresion
 suprimer.addEventListener("click",(_event)=>{
  if(memoire.length === 0){
