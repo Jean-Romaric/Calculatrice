@@ -35,10 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
               ){
               return
             }else{
-              if ('vibrate' in navigator) {
-              // Fait vibrer pendant 200 millisecondes
-              navigator.vibrate(200); 
-              }
               memoire.push(nbre);
               screen.textContent = memoire.join('').slice(-15); //pp
               console.log(memoire);
