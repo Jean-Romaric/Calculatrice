@@ -103,12 +103,12 @@ dernierOperateurIndex() == -1
 
 //Suppresion
 suprimer.addEventListener("click",(_event)=>{
-  if ('vibrate' in navigator) {
-   navigator.vibrate(200); // Fait vibrer pendant 200 millisecondes
-  }
  if(memoire.length === 0){
   return
  }else{
+  if ('vibrate' in navigator) {
+  navigator.vibrate(200); // Fait vibrer pendant 200 millisecondes
+  }
   memoire.pop();
   screen.textContent = memoire.join('').slice(-15);
   console.log(memoire);
