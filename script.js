@@ -125,13 +125,9 @@ suprimer.addEventListener("mousedown",(_event)=>{
 
 
 //Calcule "="
-egal.addEventListener("click",(_event)=>{
-   if ('vibrate' in navigator) {
-    // Fait vibrer pendant 200 millisecondes
-    navigator.vibrate(200);
-    }     
+egal.addEventListener("click",(_event)=>{  
   let dernier = memoire[memoire.length - 1];
-  let erreur = "Erreur";// c'est du text prute que je met dans div, je p pas styliser directement.
+   // c'est du text prute que je met dans div, je p pas styliser directement.
   //console.log(erreur);
   if(memoire.length === 0 ){
     return;
@@ -139,6 +135,10 @@ egal.addEventListener("click",(_event)=>{
     return;
 
   } else {
+    if ('vibrate' in navigator) {
+    // Fait vibrer pendant 200 millisecondes
+    navigator.vibrate(200);
+    }   
    for(i = 0; i<=memoire.length-1; i++){
     //console.log(memoire[i]);
     if(memoire[i] == "x"){
