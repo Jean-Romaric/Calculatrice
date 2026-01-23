@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if ('vibrate' in navigator) {
         // Fait vibrer pendant 200 millisecondes
         navigator.vibrate(200); 
-      }
+        }
         if (memoire.length === 0 )  {
             if(button.classList.contains("opperateur")
                && !button.classList.contains("moins")
@@ -103,6 +103,9 @@ dernierOperateurIndex() == -1
 
 //Suppresion
 suprimer.addEventListener("click",(_event)=>{
+  if ('vibrate' in navigator) {
+   navigator.vibrate(200); // Fait vibrer pendant 200 millisecondes
+  }
  if(memoire.length === 0){
   return
  }else{
@@ -122,6 +125,10 @@ suprimer.addEventListener("mousedown",(_event)=>{
 
 //Calcule "="
 egal.addEventListener("click",(_event)=>{
+   if ('vibrate' in navigator) {
+    // Fait vibrer pendant 200 millisecondes
+    navigator.vibrate(200);
+    }     
   let dernier = memoire[memoire.length - 1];
   let erreur = "Erreur";// c'est du text prute que je met dans div, je p pas styliser directement.
   //console.log(erreur);
