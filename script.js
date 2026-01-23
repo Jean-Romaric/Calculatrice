@@ -108,8 +108,7 @@ egal.addEventListener("click",(_event)=>{
   let erreur = "Erreur";// c'est du text prute que je met dans div, je p pas styliser directement.
   //console.log(erreur);
   if(memoire.length === 0 ){
-    screen.innerHTML = erreur;
-    return
+    return;
   } else if(estOperateur(dernier) || dernier === "." ){
     screen.innerHTML = erreur;
     memoire.splice(0, memoire.length);//Supp tout le tbleau
@@ -139,6 +138,7 @@ egal.addEventListener("click",(_event)=>{
 //Ajuster un fontSize correcte
 //Afficher le resultat à gauche 
 //Ajuster les resultats trop long
+//Fait clignoté le curseur 
 
 // Genre de resultat 4.E11
 //Opperationde se genre 0.OO5+1 "bug"
