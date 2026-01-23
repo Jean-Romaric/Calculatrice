@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let suprimer = document.querySelector(".remove");
   let egal = document.querySelector(".divEgal");
 
-  screen.innerHTML = "Flavio fuck!🖕"
+  screen.innerHTML = "Flaviofuck!🖕"
   //console.log(egal);
   
   //[const mobileQuery = window.matchMedia('(max-width: 518px)');
