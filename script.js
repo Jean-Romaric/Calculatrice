@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
   //console.log(mobileQuery.matches)] Pour adaapter sur mobile
 
   let memoire = [];
+  ''
   /*if(mobileQuery.matches){
   screen.textContent = memoire.join('').slice(-0);
 }*/
@@ -87,10 +88,11 @@ dernierOperateurIndex() == -1
   
   }
   });
- });
+});
 
 
- 
+
+
 //Suppresion
 suprimer.addEventListener("click",(_event)=>{
  if(memoire.length === 0){
@@ -101,6 +103,20 @@ suprimer.addEventListener("click",(_event)=>{
   console.log(memoire);
  }
 });
+suprimer.addEventListener("mousedown",(_event)=>{
+  console.log("maintenu");
+  if(memoire.length === 0){
+  return
+ }else{
+  memoire.pop();
+  screen.textContent = memoire.join('').slice(-15);
+  console.log(memoire);
+ }
+})
+
+
+
+
 
 //Calcule "="
 egal.addEventListener("click",(_event)=>{
@@ -111,6 +127,7 @@ egal.addEventListener("click",(_event)=>{
     return;
   } else if(estOperateur(dernier) || dernier === "." ){
     return;
+
   } else {
    for(i = 0; i<=memoire.length-1; i++){
     //console.log(memoire[i]);
